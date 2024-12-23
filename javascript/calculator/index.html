@@ -1,14 +1,27 @@
-<!-- 
-Create a webpage with a simple calculator
-Create two fields to take input of two numbers
-Create 4 buttons to perform 4 operations - Add, Subtract, Divide, Multiply
-Alert the result based on the button that was clicked.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <h1>Simple Calculator</h1>
+        
+        <label for="num1">Number 1:</label>
+        <input type="number" id="num1" value="0"><br><br>
 
-Make sure the input fields have an id of num1 and num2
-Make sure the “Add” button has an id of add
-Make sure the “Subtract” button has an id of subtract
-Make sure the “Multiply” button has an id of multiply
-Make sure the “Divide” button has an id of divide
+        <label for="num2">Number 2:</label>
+        <input type="number" id="num2" value="0"><br><br>
 
-The IDs should match or else the tests will fail.
- -->
+        <button id="add">Add</button>
+        <button id="subtract">Subtract</button>
+        <button id="multiply">Multiply</button>
+        <button id="divide">Divide</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

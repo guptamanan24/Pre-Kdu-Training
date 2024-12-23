@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #333;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  color: #fff;
+  text-align: center;
+  background: #007acc;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 900px;
+  margin: 1rem auto;
+  padding: 2rem 0;
+}
+
+header h1 {
+  margin-bottom: .5rem;
+  font-size: 2.5rem;
+}
+
+header p {
+  margin-top: .5rem;
+  font-size: 1.2rem;
+}
+
+section {
+  background: #fff;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 800px;
+  margin: 1rem auto;
+  padding: 2rem;
+  box-shadow: 0 2px 5px #0000001a;
+}
+
+section h2 {
+  text-align: center;
+  color: #007acc;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.profile-img {
+  object-fit: cover;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 1.5rem;
+  display: block;
+  box-shadow: 0 4px 6px #0000001a;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+table th, table td {
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: .8rem;
+}
+
+table th {
+  color: #fff;
+  background: #007acc;
+}
+
+table tr:nth-child(2n) {
+  background: #f9f9f9;
+}
+
+.project {
+  align-items: center;
+  margin-bottom: 1.5rem;
+  display: flex;
+}
+
+.project img {
+  object-fit: cover;
+  border-radius: 8px;
+  width: 150px;
+  height: 100px;
+  margin-right: 1rem;
+  box-shadow: 0 2px 4px #0000001a;
+}
+
+.project p {
+  flex: 1;
+}
+
+.skills-list {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+}
+
+.skills-list li {
+  color: #fff;
+  text-align: center;
+  background: #007acc;
+  border-radius: 20px;
+  padding: .5rem 1rem;
+  font-size: 1rem;
+  box-shadow: 0 2px 4px #0000001a;
+}
+
+footer {
+  text-align: center;
+  color: #fff;
+  background: #007acc;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 900px;
+  margin: 2rem auto 1rem;
+  padding: 1rem;
+}
+
+footer a {
+  color: #57ffa0;
+  margin: 0 .5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+/*# sourceMappingURL=index.2cdaf7bc.css.map */
