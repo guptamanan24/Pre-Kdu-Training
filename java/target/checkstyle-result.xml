@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="9.3">
+<file name="C:\Users\gupta\OneDrive\Desktop\pre-kdu-training\java\src\main\java\com\prekdu\CollectionsExample.java">
+</file>
+<file name="C:\Users\gupta\OneDrive\Desktop\pre-kdu-training\java\src\main\java\com\prekdu\CSVWordFrequency.java">
+<error line="37" severity="error" message="Line is longer than 80 characters (found 81)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+</file>
+<file name="C:\Users\gupta\OneDrive\Desktop\pre-kdu-training\java\src\main\java\com\prekdu\package-info.java">
+</file>
+<file name="C:\Users\gupta\OneDrive\Desktop\pre-kdu-training\java\src\main\java\com\prekdu\StringComparison.java">
+</file>
+</checkstyle>
