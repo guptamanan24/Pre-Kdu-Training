@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.prekdu.LibraryManagementSystemTest" time="0.091" tests="9" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.prekdu.LibraryManagementSystemTest" time="0.095" tests="9" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="IN"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
-    <property name="sun.java.command" value="C:\Users\gupta\AppData\Local\Temp\surefire2430677147024228821\surefirebooter-20241231165744281_3.jar C:\Users\gupta\AppData\Local\Temp\surefire2430677147024228821 2024-12-31T16-57-44_109-jvmRun1 surefire-20241231165744281_1tmp surefire_0-20241231165744281_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\gupta\AppData\Local\Temp\surefire11584456378132559239\surefirebooter-20241231165912103_3.jar C:\Users\gupta\AppData\Local\Temp\surefire11584456378132559239 2024-12-31T16-59-11_941-jvmRun1 surefire-20241231165912103_1tmp surefire_0-20241231165912103_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\gupta\OneDrive\Desktop\pre-kdu-training\java_oops\target\test-classes;C:\Users\gupta\OneDrive\Desktop\pre-kdu-training\java_oops\target\classes;C:\Users\gupta\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.11.3\junit-jupiter-api-5.11.3.jar;C:\Users\gupta\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\gupta\.m2\repository\org\junit\platform\junit-platform-commons\1.11.3\junit-platform-commons-1.11.3.jar;C:\Users\gupta\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\gupta\AppData\Local\Temp\surefire2430677147024228821\surefirebooter-20241231165744281_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\gupta\AppData\Local\Temp\surefire11584456378132559239\surefirebooter-20241231165912103_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.5+9-LTS-239"/>
@@ -58,7 +58,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testBorrowAndReturn" classname="com.prekdu.LibraryManagementSystemTest" time="0.034">
+  <testcase name="testBorrowAndReturn" classname="com.prekdu.LibraryManagementSystemTest" time="0.035">
     <system-out><![CDATA[B001 borrowed by: STD001
 B001returned by: STD001
 ]]></system-out>
@@ -69,12 +69,12 @@ Book reserved by member: STD002
 BOOK is Reserved by Another member
 ]]></system-out>
   </testcase>
-  <testcase name="testBookLateFeeCalculation" classname="com.prekdu.LibraryManagementSystemTest" time="0.002"/>
+  <testcase name="testBookLateFeeCalculation" classname="com.prekdu.LibraryManagementSystemTest" time="0.001"/>
   <testcase name="testInvalidReservation" classname="com.prekdu.LibraryManagementSystemTest" time="0.003">
     <system-out><![CDATA[Book reserved by member: STD002
 ]]></system-out>
   </testcase>
-  <testcase name="testStandardMemberBorrowLimit" classname="com.prekdu.LibraryManagementSystemTest" time="0.006">
+  <testcase name="testStandardMemberBorrowLimit" classname="com.prekdu.LibraryManagementSystemTest" time="0.005">
     <system-out><![CDATA[B000 borrowed by: STD001
 B001 borrowed by: STD001
 B002 borrowed by: STD001
@@ -100,7 +100,7 @@ B009 borrowed by: PRE001
 ]]></system-out>
   </testcase>
   <testcase name="testDigitalContentLateFeeCalculation" classname="com.prekdu.LibraryManagementSystemTest" time="0.001"/>
-  <testcase name="testDigitalContentRenewal" classname="com.prekdu.LibraryManagementSystemTest" time="0.002">
+  <testcase name="testDigitalContentRenewal" classname="com.prekdu.LibraryManagementSystemTest" time="0.003">
     <system-out><![CDATA[D001 borrowed by: STD001
 Periodical renewed by: STD001
 ]]></system-out>

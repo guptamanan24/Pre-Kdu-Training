@@ -179,16 +179,16 @@ class DigitalContent extends LibraryResource implements Renewable {
   /** Specifies the format of the content, such as PDF, EPUB, or DOCX. */
   private final ContentFormat format;
 
-//  DigitalContent() {
-//    super(r, t, true);
-//    this.fileSize = s;
-//    this.format = f;
-//  }
+  //  DigitalContent() {
+  //    super(r, t, true);
+  //    this.fileSize = s;
+  //    this.format = f;
+  //  }
   DigitalContent(
-          final String resourceID,
-          final String title,
-          final double newFilesize,
-          final ContentFormat newformat) {
+      final String resourceID,
+      final String title,
+      final double newFilesize,
+      final ContentFormat newformat) {
     super(resourceID, title, true);
     this.fileSize = newFilesize;
     this.format = newformat;
