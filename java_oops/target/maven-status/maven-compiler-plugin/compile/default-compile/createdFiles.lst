@@ -1,0 +1,15 @@
+com\prekdu\ContentFormat.class
+com\prekdu\MaximumLoanExceededException.class
+com\prekdu\ResourceStatus.class
+com\prekdu\DigitalContent.class
+com\prekdu\LibraryResource.class
+com\prekdu\Renewable.class
+com\prekdu\ResourceNotAvailableException.class
+com\prekdu\Reservable.class
+com\prekdu\MembershipType.class
+com\prekdu\Periodical.class
+com\prekdu\package-info.class
+com\prekdu\App.class
+com\prekdu\Book.class
+com\prekdu\Frequency.class
+com\prekdu\LibraryMember.class

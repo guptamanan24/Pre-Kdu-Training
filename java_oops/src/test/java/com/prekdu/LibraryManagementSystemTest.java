@@ -2,7 +2,8 @@ package com.prekdu;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 class LibraryManagementSystemTest {
   private LibraryMember standardMember;
@@ -30,34 +31,40 @@ class LibraryManagementSystemTest {
 
   @Test
   void testStandardMemberBorrowLimit() {
-    // Attempt to borrow more than the limit
     for (int i = 0; i < 5; i++) {
       Book newBook = new Book("B00" + i, "Test Book " + i, "Author", "ISBN");
-      standardMember.borrowResource(newBook);
+      try {
+        standardMember.borrowResource(newBook);
+      } catch (ResourceNotAvailableException | MaximumLoanExceededException e) {
+        fail("Unexpected exception: " + e.getMessage());
+      }
     }
 
     Book extraBook = new Book("B006", "Extra Book", "Author", "ISBN");
     assertThrows(
-        MaximumLoanExceededException.class,
-        () -> {
-          standardMember.borrowResource(extraBook);
-        });
+        MaximumLoanExceededException.class, () -> standardMember.borrowResource(extraBook));
   }
 
   @Test
   void testPremiumMemberBorrowLimit() {
-    // Premium members should be able to borrow 10 items
     for (int i = 0; i < 10; i++) {
       Book newBook = new Book("B00" + i, "Test Book " + i, "Author", "ISBN");
-      premiumMember.borrowResource(newBook);
+      try {
+        premiumMember.borrowResource(newBook);
+      } catch (ResourceNotAvailableException | MaximumLoanExceededException e) {
+        fail("Unexpected exception: " + e.getMessage());
+      }
     }
-
     assertEquals(10, premiumMember.getBorrowedResources().size());
   }
 
   @Test
   void testBorrowAndReturn() {
-    standardMember.borrowResource(book);
+    try {
+      standardMember.borrowResource(book); // Handle exception here
+    } catch (ResourceNotAvailableException | MaximumLoanExceededException e) {
+      fail("Unexpected exception: " + e.getMessage());
+    }
     assertEquals(ResourceStatus.BORROWED, book.getStatus());
     assertEquals(1, standardMember.getBorrowedResources().size());
 
@@ -68,37 +75,41 @@ class LibraryManagementSystemTest {
 
   @Test
   void testBookReservation() {
-    standardMember.borrowResource(book);
+    try {
+      standardMember.borrowResource(book);
+    } catch (ResourceNotAvailableException | MaximumLoanExceededException e) {
+      fail("Unexpected exception: " + e.getMessage());
+    }
     LibraryMember anotherMember = new LibraryMember("STD002", MembershipType.STANDARD);
-
     book.reserve(anotherMember);
     assertFalse(book.renewLoan(standardMember));
   }
 
   @Test
   void testResourceAvailability() {
-    standardMember.borrowResource(book);
-
+    try {
+      standardMember.borrowResource(book); // Handle exception here
+    } catch (ResourceNotAvailableException | MaximumLoanExceededException e) {
+      fail("Unexpected exception: " + e.getMessage());
+    }
     LibraryMember anotherMember = new LibraryMember("STD002", MembershipType.STANDARD);
-    assertThrows(
-        ResourceNotAvailableException.class,
-        () -> {
-          anotherMember.borrowResource(book);
-        });
+    assertThrows(ResourceNotAvailableException.class, () -> anotherMember.borrowResource(book));
   }
 
   @Test
   void testDigitalContentRenewal() {
-    standardMember.borrowResource(digitalContent);
+    try {
+      standardMember.borrowResource(digitalContent); // Handle exception here
+    } catch (ResourceNotAvailableException | MaximumLoanExceededException e) {
+      fail("Unexpected exception: " + e.getMessage());
+    }
     assertTrue(digitalContent.renewLoan(standardMember));
   }
 
   @Test
   void testInvalidReservation() {
-    assertThrows(
-        IllegalStateException.class,
-        () -> {
-          book.reserve(standardMember);
-        });
+    LibraryMember anotherMember = new LibraryMember("STD002", MembershipType.STANDARD);
+    book.reserve(anotherMember);
+    assertThrows(IllegalStateException.class, () -> book.reserve(standardMember));
   }
 }
